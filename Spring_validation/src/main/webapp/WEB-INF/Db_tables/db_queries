@@ -1,0 +1,30 @@
+CREATE DATABASE data_entry_database;
+
+create table login
+(
+a_id int PRIMARY KEY NOT null,
+a_password varchar(20)
+)
+
+create table create_new_user
+(
+u_id int PRIMARY KEY NOT null,
+u_name varchar(30) NOT null,
+u_password varchar(20) NOT null,
+u_email varchar(30) NOT null DEFAULT '',
+u_contact varchar(15) NOT null,
+u_address varchar(100) NOT null DEFAULT '',
+u_NIC varchar(20) NOT null DEFAULT ''
+)
+
+create table login
+(
+u_id int UNIQUE NOT null,
+u_name varchar(30) NOT null,
+u_password varchar(20) NOT null,
+u_email varchar(30) NOT null DEFAULT '',
+u_contact varchar(15) NOT null,
+u_address varchar(100) NOT null DEFAULT '',
+u_NIC varchar(20) NOT null DEFAULT ''
+)
+insert into login values(123,'laraib','1234','laraib@gmail.com','03312029645','c/1t nazmimabad','42101-60254-5')
